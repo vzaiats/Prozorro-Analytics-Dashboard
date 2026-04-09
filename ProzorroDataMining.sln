@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProzorroDataMining.Api", "ProzorroDataMining.Api\ProzorroDataMining.Api.csproj", "{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProzorroDataMining.Data", "ProzorroDataMining.Data\ProzorroDataMining.Data.csproj", "{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProzorroDataMining.Domain", "ProzorroDataMining.Domain\ProzorroDataMining.Domain.csproj", "{02AA1E22-1B20-413D-AD1B-EC60571A55EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProzorroDataMining.Frontend", "ProzorroDataMining.Frontend", "{2031CB12-2E9E-4C72-84DA-1F235AE5092D}"
+	ProjectSection(SolutionItems) = preProject
+		ProzorroDataMining.Frontend\.gitignore = ProzorroDataMining.Frontend\.gitignore
+		ProzorroDataMining.Frontend\package-lock.json = ProzorroDataMining.Frontend\package-lock.json
+		ProzorroDataMining.Frontend\package.json = ProzorroDataMining.Frontend\package.json
+		ProzorroDataMining.Frontend\README.md = ProzorroDataMining.Frontend\README.md
+		ProzorroDataMining.Frontend\tsconfig.json = ProzorroDataMining.Frontend\tsconfig.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProzorroDataMining.Application", "ProzorroDataMining.Application\ProzorroDataMining.Application.csproj", "{778CA0CA-C36D-40A9-9FC9-D6B67B794865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProzorroDataMining.Tests", "ProzorroDataMining.Tests\ProzorroDataMining.Tests.csproj", "{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		ProzorroDataMining.Frontend\src\App.css = ProzorroDataMining.Frontend\src\App.css
+		ProzorroDataMining.Frontend\src\App.test.tsx = ProzorroDataMining.Frontend\src\App.test.tsx
+		ProzorroDataMining.Frontend\src\App.tsx = ProzorroDataMining.Frontend\src\App.tsx
+		ProzorroDataMining.Frontend\src\global.d.ts = ProzorroDataMining.Frontend\src\global.d.ts
+		ProzorroDataMining.Frontend\src\index.css = ProzorroDataMining.Frontend\src\index.css
+		ProzorroDataMining.Frontend\src\index.tsx = ProzorroDataMining.Frontend\src\index.tsx
+		ProzorroDataMining.Frontend\src\logo.svg = ProzorroDataMining.Frontend\src\logo.svg
+		ProzorroDataMining.Frontend\src\react-app-env.d.ts = ProzorroDataMining.Frontend\src\react-app-env.d.ts
+		ProzorroDataMining.Frontend\src\reportWebVitals.ts = ProzorroDataMining.Frontend\src\reportWebVitals.ts
+		ProzorroDataMining.Frontend\src\setupTests.ts = ProzorroDataMining.Frontend\src\setupTests.ts
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Debug|x64.Build.0 = Debug|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Debug|x86.Build.0 = Debug|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Release|x64.ActiveCfg = Release|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Release|x64.Build.0 = Release|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Release|x86.ActiveCfg = Release|Any CPU
+		{1D519806-752F-46F7-AAEE-A8A0E5EA4A59}.Release|x86.Build.0 = Release|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Debug|x64.Build.0 = Debug|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Debug|x86.Build.0 = Debug|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Release|x64.ActiveCfg = Release|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Release|x64.Build.0 = Release|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Release|x86.ActiveCfg = Release|Any CPU
+		{A2CC3104-0DA3-4D9E-89BE-E700F08D4E85}.Release|x86.Build.0 = Release|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Debug|x64.Build.0 = Debug|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Debug|x86.Build.0 = Debug|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Release|x64.ActiveCfg = Release|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Release|x64.Build.0 = Release|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{02AA1E22-1B20-413D-AD1B-EC60571A55EF}.Release|x86.Build.0 = Release|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Debug|x64.Build.0 = Debug|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Debug|x86.Build.0 = Debug|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Release|x64.ActiveCfg = Release|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Release|x64.Build.0 = Release|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Release|x86.ActiveCfg = Release|Any CPU
+		{778CA0CA-C36D-40A9-9FC9-D6B67B794865}.Release|x86.Build.0 = Release|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Debug|x64.Build.0 = Debug|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Release|x64.ActiveCfg = Release|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Release|x64.Build.0 = Release|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{F885E5C3-CFBF-4D5C-8914-280FB9ED09A7}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {2031CB12-2E9E-4C72-84DA-1F235AE5092D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F8DB5F1-7FC7-4C62-8F4A-BCA25D41BB1A}
+	EndGlobalSection
+EndGlobal
