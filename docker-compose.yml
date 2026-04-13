@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:17
+    container_name: prozorro_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: prozorrodb
+    ports:
+      - "5432:5432"   # expose PostgreSQL port to host
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # persist database data between runs
+
+  backend:
+    build:
+      context: .
+      dockerfile: ./ProzorroDataMining.Api/Dockerfile
+    container_name: prozorro_backend
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=prozorrodb;Username=admin;Password=admin123"
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+      DOTNET_RUNNING_IN_CONTAINER: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "/https/aspnetapp.pfx"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: "password123"
+    ports:
+      - "5000:80"   # map container HTTP to host port 5000
+      - "5001:443"  # map container HTTPS to host port 5001
+    volumes:
+      - ./ProzorroDataMining.Api/https:/https:ro  # mount local HTTPS certificate into container
+    depends_on:
+      - postgres    # backend waits until postgres is ready
+
+  frontend:
+    build: ./ProzorroDataMining.Frontend
+    container_name: prozorro_frontend
+    ports:
+      - "3000:80"   # expose frontend on host port 3000
+    depends_on:
+      - backend     # frontend waits until backend is ready
+
+volumes:
+  postgres_data:    # named volume for PostgreSQL persistence
