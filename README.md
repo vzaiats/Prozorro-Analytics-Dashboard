@@ -46,6 +46,19 @@ https://localhost:5001/swagger/index.html
 http://localhost:3000/
 ```
 
+### Accessing the Database 🗄️
+
+You can access PostgreSQL via pgAdmin (only when Docker containers are running):
+
+1. 🌐 Open the following URL:
+```bash
+http://localhost:8080
+```
+
+2. Login with: ✉️ `admin@example.com` email and 🔑 `admin123`password credentials.
+
+3. 🐘 PostgreSQL server ProzorroDB will be automatically available inside pgAdmin.
+
 ## Run locally (without Docker) 🖥️
 
 1. **Configure your PostgreSQL connection** ⚙️
