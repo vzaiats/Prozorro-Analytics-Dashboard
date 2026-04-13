@@ -16,6 +16,7 @@ Before running the Prozorro Analytics Dashboard, make sure the following tools a
 * .NET 9 SDK [![.NET](https://img.shields.io/badge/.NET-9.0-blue?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 * PostgreSQL [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17.6+-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/download/)
 * Node.js [![Node.js](https://img.shields.io/badge/25.0%2B-x?style=flat&logo=Node.js&logoColor=green&label=Node.js&color=green)](https://nodejs.org/en/download)
+* Docker [![Docker](https://img.shields.io/badge/Docker-blue?logo=docker&logoColor=white)](https://www.docker.com/get-started)
 
 ## Setup
 
@@ -26,7 +27,28 @@ git clone https://github.com/vzaiats/Prozorro-Analytics-Dashboard.git
 cd Prozorro-Analytics-Dashboard
 ```
 
-2. **Configure your PostgreSQL connection** ⚙️
+## Run with Docker 🐳
+To run inside Docker containers:
+```bash
+docker-compose up --build
+```
+After build completes, open:
+
+📡 The API can be explored in [![Swagger](https://img.shields.io/badge/Swagger-UI-green?logo=swagger&logoColor=white)](https://swagger.io/tools/swagger-ui/) at the following URL:
+
+```
+https://localhost:5001/swagger/index.html
+```
+
+💻 The frontend will be available at:
+
+```bash
+http://localhost:3000/
+```
+
+## Run locally (without Docker) 🖥️
+
+1. **Configure your PostgreSQL connection** ⚙️
 
 Update the connection string in `appsettings.json`:
 
@@ -41,7 +63,7 @@ Update the connection string in `appsettings.json`:
 Database will be created automatically on first run (no need to apply migrations manually).
 
 
-## Running the API 🚀
+### Running the API 📡
 
 Before running the backend, make sure you select the startup project:
 `ProzorroDataMining.Api`
@@ -58,7 +80,7 @@ dotnet run --project ProzorroDataMining.Api
 https://localhost:5001/swagger/index.html
 ```
 
-## Running the Frontend 💻
+### Running the Frontend 💻
 
 1. Navigate to the frontend folder:
 ```bash
