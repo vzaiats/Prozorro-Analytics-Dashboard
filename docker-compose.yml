@@ -8,9 +8,9 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: prozorrodb
     ports:
-      - "5432:5432"   # expose PostgreSQL port to host
+      - "5432:5432"   # expose PostgreSQL port to host (local access via localhost:5432)
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # persist database data between runs
+      - postgres_data:/var/lib/postgresql/data  # persist PostgreSQL data between runs
 
   backend:
     build:
@@ -19,6 +19,7 @@ services:
     container_name: prozorro_backend
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      # connection string to PostgreSQL (service name "postgres" in Compose network)
       ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=prozorrodb;Username=admin;Password=admin123"
       ASPNETCORE_URLS: "https://+:443;http://+:80"
       DOTNET_RUNNING_IN_CONTAINER: "true"
@@ -31,7 +32,7 @@ services:
     volumes:
       - ./ProzorroDataMining.Api/https:/https:ro  # mount local HTTPS certificate into container
     depends_on:
-      - postgres    # backend waits until postgres is ready
+      - postgres    # backend waits until PostgreSQL is ready
 
   frontend:
     build: ./ProzorroDataMining.Frontend
@@ -41,5 +42,20 @@ services:
     depends_on:
       - backend     # frontend waits until backend is ready
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: prozorro_pgadmin
+    ports:
+      - "8080:80"   # pgAdmin available at http://localhost:8080
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com   # valid email required for login
+      PGADMIN_DEFAULT_PASSWORD: admin123         # password for login
+    volumes:
+      - ./pgadmin/servers.json:/pgadmin4/servers.json  # auto-configure servers on startup
+      - pgadmin_data:/var/lib/pgadmin                   # persist pgAdmin state between runs
+    depends_on:
+      - postgres    # pgAdmin starts after PostgreSQL
+
 volumes:
   postgres_data:    # named volume for PostgreSQL persistence
+  pgadmin_data:     # named volume for pgAdmin persistence
